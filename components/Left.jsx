@@ -1,6 +1,7 @@
 "use client";
+import dynamic from "next/dynamic";
 import List from "./List";
-import Time from "./Time";
+const Time = dynamic(() => import("./Time"), { ssr: false });
 import Search from "./Search";
 
 const Left = () => {
